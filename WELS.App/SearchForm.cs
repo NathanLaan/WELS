@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace WELS.App
 {
-    public partial class MainForm : Form
+    public partial class SearchForm : Form
     {
-        public MainForm()
+        public SearchForm()
         {
             InitializeComponent();
-        }
-
-        private void btnAddSearch_Click(object sender, EventArgs e)
-        {
-            this.lsvSearchList.Items.Add(new ListViewItem(Guid.NewGuid().ToString()));
         }
     }
 }
