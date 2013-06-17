@@ -44,90 +44,106 @@
             // 
             this.txt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt.Location = new System.Drawing.Point(120, 4);
+            this.txt.Location = new System.Drawing.Point(129, 5);
+            this.txt.Margin = new System.Windows.Forms.Padding(4);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(322, 20);
+            this.txt.Size = new System.Drawing.Size(459, 22);
             this.txt.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(120, 30);
+            this.textBox1.Location = new System.Drawing.Point(129, 37);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(322, 20);
+            this.textBox1.Size = new System.Drawing.Size(459, 22);
             this.textBox1.TabIndex = 0;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(120, 83);
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(129, 102);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(322, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(459, 22);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(120, 109);
+            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(129, 134);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(322, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(459, 22);
             this.dateTimePicker2.TabIndex = 2;
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(120, 56);
+            this.comboBox1.Location = new System.Drawing.Point(129, 69);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(322, 21);
+            this.comboBox1.Size = new System.Drawing.Size(459, 24);
             this.comboBox1.TabIndex = 3;
             // 
             // lblServerName
             // 
             this.lblServerName.AutoSize = true;
-            this.lblServerName.Location = new System.Drawing.Point(3, 7);
+            this.lblServerName.Location = new System.Drawing.Point(4, 9);
+            this.lblServerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblServerName.Name = "lblServerName";
-            this.lblServerName.Size = new System.Drawing.Size(72, 13);
+            this.lblServerName.Size = new System.Drawing.Size(95, 17);
             this.lblServerName.TabIndex = 4;
             this.lblServerName.Text = "Server Name:";
             // 
             // lblEventLogName
             // 
             this.lblEventLogName.AutoSize = true;
-            this.lblEventLogName.Location = new System.Drawing.Point(3, 33);
+            this.lblEventLogName.Location = new System.Drawing.Point(4, 41);
+            this.lblEventLogName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventLogName.Name = "lblEventLogName";
-            this.lblEventLogName.Size = new System.Drawing.Size(90, 13);
+            this.lblEventLogName.Size = new System.Drawing.Size(117, 17);
             this.lblEventLogName.TabIndex = 5;
             this.lblEventLogName.Text = "Event Log Name:";
             // 
             // lblEventLogType
             // 
             this.lblEventLogType.AutoSize = true;
-            this.lblEventLogType.Location = new System.Drawing.Point(3, 59);
+            this.lblEventLogType.Location = new System.Drawing.Point(4, 73);
+            this.lblEventLogType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEventLogType.Name = "lblEventLogType";
-            this.lblEventLogType.Size = new System.Drawing.Size(86, 13);
+            this.lblEventLogType.Size = new System.Drawing.Size(112, 17);
             this.lblEventLogType.TabIndex = 6;
             this.lblEventLogType.Text = "Event Log Type:";
             // 
             // lblStartDateTime
             // 
             this.lblStartDateTime.AutoSize = true;
-            this.lblStartDateTime.Location = new System.Drawing.Point(3, 89);
+            this.lblStartDateTime.Location = new System.Drawing.Point(4, 110);
+            this.lblStartDateTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStartDateTime.Name = "lblStartDateTime";
-            this.lblStartDateTime.Size = new System.Drawing.Size(58, 13);
+            this.lblStartDateTime.Size = new System.Drawing.Size(76, 17);
             this.lblStartDateTime.TabIndex = 7;
             this.lblStartDateTime.Text = "Start Date:";
             // 
             // lblEndDateTime
             // 
             this.lblEndDateTime.AutoSize = true;
-            this.lblEndDateTime.Location = new System.Drawing.Point(3, 115);
+            this.lblEndDateTime.Location = new System.Drawing.Point(4, 142);
+            this.lblEndDateTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEndDateTime.Name = "lblEndDateTime";
-            this.lblEndDateTime.Size = new System.Drawing.Size(55, 13);
+            this.lblEndDateTime.Size = new System.Drawing.Size(71, 17);
             this.lblEndDateTime.TabIndex = 8;
             this.lblEndDateTime.Text = "End Date:";
             // 
             // SearchControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblEndDateTime);
             this.Controls.Add(this.lblStartDateTime);
@@ -139,8 +155,9 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txt);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchControl";
-            this.Size = new System.Drawing.Size(445, 138);
+            this.Size = new System.Drawing.Size(593, 170);
             this.ResumeLayout(false);
             this.PerformLayout();
 

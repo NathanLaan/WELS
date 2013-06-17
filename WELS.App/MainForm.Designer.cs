@@ -37,11 +37,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tscSearch = new System.Windows.Forms.ToolStripContainer();
             this.lsvSearchList = new System.Windows.Forms.ListView();
+            this.lsvSearchCol1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tscSearch1 = new System.Windows.Forms.ToolStrip();
             this.btnAddSearch = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.lsvSearchCol1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mnu.SuspendLayout();
             this.tsc.ContentPanel.SuspendLayout();
             this.tsc.SuspendLayout();
@@ -64,7 +64,7 @@
             this.mnu.Location = new System.Drawing.Point(0, 0);
             this.mnu.Name = "mnu";
             this.mnu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnu.Size = new System.Drawing.Size(629, 28);
+            this.mnu.Size = new System.Drawing.Size(622, 28);
             this.mnu.TabIndex = 0;
             this.mnu.Text = "menuStrip1";
             // 
@@ -84,10 +84,10 @@
             // 
             // sts
             // 
-            this.sts.Location = new System.Drawing.Point(0, 339);
+            this.sts.Location = new System.Drawing.Point(0, 411);
             this.sts.Name = "sts";
             this.sts.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.sts.Size = new System.Drawing.Size(629, 22);
+            this.sts.Size = new System.Drawing.Size(622, 22);
             this.sts.TabIndex = 1;
             this.sts.Text = "statusStrip1";
             // 
@@ -97,13 +97,13 @@
             // tsc.ContentPanel
             // 
             this.tsc.ContentPanel.Controls.Add(this.splitContainer1);
-            this.tsc.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tsc.ContentPanel.Size = new System.Drawing.Size(629, 280);
+            this.tsc.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.tsc.ContentPanel.Size = new System.Drawing.Size(622, 358);
             this.tsc.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tsc.Location = new System.Drawing.Point(0, 28);
-            this.tsc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tsc.Margin = new System.Windows.Forms.Padding(4);
             this.tsc.Name = "tsc";
-            this.tsc.Size = new System.Drawing.Size(629, 311);
+            this.tsc.Size = new System.Drawing.Size(622, 383);
             this.tsc.TabIndex = 2;
             this.tsc.Text = "toolStripContainer1";
             // 
@@ -111,7 +111,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -121,8 +121,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(629, 280);
-            this.splitContainer1.SplitterDistance = 209;
+            this.splitContainer1.Size = new System.Drawing.Size(622, 358);
+            this.splitContainer1.SplitterDistance = 206;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -132,13 +132,13 @@
             // tscSearch.ContentPanel
             // 
             this.tscSearch.ContentPanel.Controls.Add(this.lsvSearchList);
-            this.tscSearch.ContentPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tscSearch.ContentPanel.Size = new System.Drawing.Size(209, 253);
+            this.tscSearch.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.tscSearch.ContentPanel.Size = new System.Drawing.Size(206, 331);
             this.tscSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tscSearch.Location = new System.Drawing.Point(0, 0);
-            this.tscSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tscSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tscSearch.Name = "tscSearch";
-            this.tscSearch.Size = new System.Drawing.Size(209, 280);
+            this.tscSearch.Size = new System.Drawing.Size(206, 358);
             this.tscSearch.TabIndex = 0;
             this.tscSearch.Text = "toolStripContainer1";
             // 
@@ -152,12 +152,16 @@
             this.lsvSearchCol1});
             this.lsvSearchList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvSearchList.Location = new System.Drawing.Point(0, 0);
-            this.lsvSearchList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lsvSearchList.Margin = new System.Windows.Forms.Padding(4);
             this.lsvSearchList.Name = "lsvSearchList";
-            this.lsvSearchList.Size = new System.Drawing.Size(209, 253);
+            this.lsvSearchList.Size = new System.Drawing.Size(206, 331);
             this.lsvSearchList.TabIndex = 0;
             this.lsvSearchList.UseCompatibleStateImageBehavior = false;
             this.lsvSearchList.View = System.Windows.Forms.View.Details;
+            // 
+            // lsvSearchCol1
+            // 
+            this.lsvSearchCol1.Text = "Search";
             // 
             // tscSearch1
             // 
@@ -191,29 +195,26 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Size = new System.Drawing.Size(415, 280);
-            this.splitContainer2.SplitterDistance = 137;
+            this.splitContainer2.Size = new System.Drawing.Size(411, 358);
+            this.splitContainer2.SplitterDistance = 135;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
-            // 
-            // lsvSearchCol1
-            // 
-            this.lsvSearchCol1.Text = "Search";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 361);
+            this.ClientSize = new System.Drawing.Size(622, 433);
             this.Controls.Add(this.tsc);
             this.Controls.Add(this.sts);
             this.Controls.Add(this.mnu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnu;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windows Event Log Search";
             this.mnu.ResumeLayout(false);
             this.mnu.PerformLayout();
