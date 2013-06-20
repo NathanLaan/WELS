@@ -13,7 +13,16 @@ namespace WELS.App
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
-        public Co
+        public SearchStatusOutputHandler SSOH { get; set; }
+        public SearchResultOutputHandler SROH { get; set; }
+
+        public void Start()
+        {
+        }
+
+        public void Stop()
+        {
+        }
 
     }
 }
