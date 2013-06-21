@@ -14,5 +14,12 @@ namespace WELS.App
 
         public string ReplacementString { get; set; }
 
+        public bool Found { get; set; }
+
+        public SearchResult()
+        {
+            this.Found = false;
+        }
+
     }
 }

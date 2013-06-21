@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using System.Diagnostics;
 
 namespace WELS.App
 {
@@ -51,9 +50,33 @@ namespace WELS.App
                     {
                         this.SSOH.Update(log.Entries.Count, count++);
                     }
-                    //
-                    // TODO: Look for search term
-                    //
+                    
+                    SearchResult sr = new SearchResult();
+
+
+                    if (entry.ReplacementStrings.Length > 0)
+                    {
+                        if (entry.ReplacementStrings[0].Contains(this.Text))
+                        {
+                            sr.ReplacementString = entry.ReplacementStrings[0];
+                            sr.Found = true;
+                            sr.Timestamp = entry.TimeWritten;
+                        }
+                    }
+                    if (entry.Message.Contains(this.Text))
+                    {
+                        sr.Message = entry.Message;
+                        sr.Found = true;
+                        sr.Timestamp = entry.TimeWritten;
+                    }
+
+                    if (sr.Found)
+                    {
+                        if (this.SROH != null)
+                        {
+                            this.SROH.AddSearchResult(sr);
+                        }
+                    }
                 }
             }
             catch (Exception e)
