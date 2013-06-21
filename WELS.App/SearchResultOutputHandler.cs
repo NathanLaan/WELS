@@ -8,7 +8,7 @@ namespace WELS.App
     interface SearchResultOutputHandler
     {
 
-        public void AddSearchResult(SearchResult sr);
+        void AddSearchResult(SearchResult sr);
 
     }
 }

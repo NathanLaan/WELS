@@ -54,28 +54,6 @@ namespace WELS.App
 
 
 
-        private void ProcessEventLog()
-        {
-            try
-            {
-                var log = new EventLog(this.txtEventLogName.Text, this.txtServerName.Text);
-                int count = 0;
-                foreach (EventLogEntry entry in log.Entries)
-                {
-                    if (!threadRunning)
-                    {
-                        break;
-                    }
-                    UpdateProgress(log.Entries.Count, count++);
-                    
-                }
-            }
-            catch (Exception e)
-            {
-                this.AppendText(e.ToString());
-            }
-        }
-
 
     }
 }

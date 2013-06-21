@@ -8,7 +8,7 @@ namespace WELS.App
     interface SearchStatusOutputHandler
     {
 
-        public void Update(int max, int current);
+        void Update(int max, int current);
 
     }
 }
