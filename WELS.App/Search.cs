@@ -53,7 +53,6 @@ namespace WELS.App
                     
                     SearchResult sr = new SearchResult();
 
-
                     if (entry.ReplacementStrings.Length > 0)
                     {
                         if (entry.ReplacementStrings[0].Contains(this.Text))
