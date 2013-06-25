@@ -18,7 +18,7 @@ namespace WELS.App
         private void btnAddSearch_Click(object sender, EventArgs e)
         {
             SearchForm searchForm = new SearchForm();
-            searchForm.Show(this);
+            searchForm.ShowDialog(this);
             this.lsvSearchList.Items.Add(new ListViewItem(Guid.NewGuid().ToString()));
         }
 
