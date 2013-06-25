@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WELS.App
 {
-    class SearchResult
+    internal class SearchResult
     {
 
         public DateTime Timestamp { get; set; }

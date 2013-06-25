@@ -33,7 +33,7 @@ namespace WELS.App
             this.cboEventLogType.Items.Add(new LogTypeItem(EventLogEntryType.Warning));
         }
 
-        Search SearchParameters
+        internal Search SearchParameters
         {
             get
             {

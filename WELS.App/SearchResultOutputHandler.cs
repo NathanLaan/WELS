@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WELS.App
 {
-    interface SearchResultOutputHandler
+    internal interface SearchResultOutputHandler
     {
 
         void AddSearchResult(SearchResult sr);

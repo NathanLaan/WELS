@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WELS.App
 {
-    interface SearchStatusOutputHandler
+    internal interface SearchStatusOutputHandler
     {
 
         void Update(int max, int current);

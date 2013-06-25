@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace WELS.App
 {
-    class Search
+    internal class Search
     {
 
         public string ServerName { get; set; }

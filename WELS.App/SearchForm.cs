@@ -11,6 +11,15 @@ namespace WELS.App
 {
     public partial class SearchForm : Form
     {
+
+        internal Search SearchParameters
+        {
+            get
+            {
+                return this.searchControl1.SearchParameters;
+            }
+        }
+
         public SearchForm()
         {
             InitializeComponent();
