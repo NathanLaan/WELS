@@ -37,11 +37,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tscSearch = new System.Windows.Forms.ToolStripContainer();
             this.lsvSearchList = new System.Windows.Forms.ListView();
-            this.lsvSearchCol1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lsvSearchText = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tscSearch1 = new System.Windows.Forms.ToolStrip();
             this.btnAddSearch = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txtOutput = new System.Windows.Forms.TextBox();
+            this.lsvServer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lsvEventLog = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.mnu.SuspendLayout();
             this.tsc.ContentPanel.SuspendLayout();
             this.tsc.SuspendLayout();
@@ -54,6 +57,7 @@
             this.tscSearch.SuspendLayout();
             this.tscSearch1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +67,7 @@
             this.mnuFile});
             this.mnu.Location = new System.Drawing.Point(0, 0);
             this.mnu.Name = "mnu";
-            this.mnu.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnu.Size = new System.Drawing.Size(622, 28);
+            this.mnu.Size = new System.Drawing.Size(466, 24);
             this.mnu.TabIndex = 0;
             this.mnu.Text = "menuStrip1";
             // 
@@ -73,21 +76,20 @@
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuFileExit});
             this.mnuFile.Name = "mnuFile";
-            this.mnuFile.Size = new System.Drawing.Size(44, 24);
+            this.mnuFile.Size = new System.Drawing.Size(35, 20);
             this.mnuFile.Text = "&File";
             // 
             // mnuFileExit
             // 
             this.mnuFileExit.Name = "mnuFileExit";
-            this.mnuFileExit.Size = new System.Drawing.Size(102, 24);
+            this.mnuFileExit.Size = new System.Drawing.Size(92, 22);
             this.mnuFileExit.Text = "E&xit";
             // 
             // sts
             // 
-            this.sts.Location = new System.Drawing.Point(0, 411);
+            this.sts.Location = new System.Drawing.Point(0, 330);
             this.sts.Name = "sts";
-            this.sts.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.sts.Size = new System.Drawing.Size(622, 22);
+            this.sts.Size = new System.Drawing.Size(466, 22);
             this.sts.TabIndex = 1;
             this.sts.Text = "statusStrip1";
             // 
@@ -97,13 +99,11 @@
             // tsc.ContentPanel
             // 
             this.tsc.ContentPanel.Controls.Add(this.splitContainer1);
-            this.tsc.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.tsc.ContentPanel.Size = new System.Drawing.Size(622, 358);
+            this.tsc.ContentPanel.Size = new System.Drawing.Size(466, 286);
             this.tsc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tsc.Location = new System.Drawing.Point(0, 28);
-            this.tsc.Margin = new System.Windows.Forms.Padding(4);
+            this.tsc.Location = new System.Drawing.Point(0, 24);
             this.tsc.Name = "tsc";
-            this.tsc.Size = new System.Drawing.Size(622, 383);
+            this.tsc.Size = new System.Drawing.Size(466, 306);
             this.tsc.TabIndex = 2;
             this.tsc.Text = "toolStripContainer1";
             // 
@@ -111,7 +111,6 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -121,9 +120,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(622, 358);
-            this.splitContainer1.SplitterDistance = 206;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(466, 286);
+            this.splitContainer1.SplitterDistance = 154;
             this.splitContainer1.TabIndex = 0;
             // 
             // tscSearch
@@ -132,13 +130,11 @@
             // tscSearch.ContentPanel
             // 
             this.tscSearch.ContentPanel.Controls.Add(this.lsvSearchList);
-            this.tscSearch.ContentPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.tscSearch.ContentPanel.Size = new System.Drawing.Size(206, 331);
+            this.tscSearch.ContentPanel.Size = new System.Drawing.Size(154, 261);
             this.tscSearch.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tscSearch.Location = new System.Drawing.Point(0, 0);
-            this.tscSearch.Margin = new System.Windows.Forms.Padding(4);
             this.tscSearch.Name = "tscSearch";
-            this.tscSearch.Size = new System.Drawing.Size(206, 358);
+            this.tscSearch.Size = new System.Drawing.Size(154, 286);
             this.tscSearch.TabIndex = 0;
             this.tscSearch.Text = "toolStripContainer1";
             // 
@@ -149,19 +145,20 @@
             // lsvSearchList
             // 
             this.lsvSearchList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.lsvSearchCol1});
+            this.lsvSearchText,
+            this.lsvServer,
+            this.lsvEventLog});
             this.lsvSearchList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lsvSearchList.Location = new System.Drawing.Point(0, 0);
-            this.lsvSearchList.Margin = new System.Windows.Forms.Padding(4);
             this.lsvSearchList.Name = "lsvSearchList";
-            this.lsvSearchList.Size = new System.Drawing.Size(206, 331);
+            this.lsvSearchList.Size = new System.Drawing.Size(154, 261);
             this.lsvSearchList.TabIndex = 0;
             this.lsvSearchList.UseCompatibleStateImageBehavior = false;
             this.lsvSearchList.View = System.Windows.Forms.View.Details;
             // 
-            // lsvSearchCol1
+            // lsvSearchText
             // 
-            this.lsvSearchCol1.Text = "Search";
+            this.lsvSearchText.Text = "Search";
             // 
             // tscSearch1
             // 
@@ -171,7 +168,7 @@
             this.btnSave});
             this.tscSearch1.Location = new System.Drawing.Point(3, 0);
             this.tscSearch1.Name = "tscSearch1";
-            this.tscSearch1.Size = new System.Drawing.Size(188, 27);
+            this.tscSearch1.Size = new System.Drawing.Size(151, 25);
             this.tscSearch1.TabIndex = 0;
             // 
             // btnAddSearch
@@ -179,7 +176,7 @@
             this.btnAddSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnAddSearch.Image")));
             this.btnAddSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAddSearch.Name = "btnAddSearch";
-            this.btnAddSearch.Size = new System.Drawing.Size(116, 24);
+            this.btnAddSearch.Size = new System.Drawing.Size(96, 22);
             this.btnAddSearch.Text = "New Search...";
             this.btnAddSearch.Click += new System.EventHandler(this.btnAddSearch_Click);
             // 
@@ -188,31 +185,49 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(60, 24);
+            this.btnSave.Size = new System.Drawing.Size(51, 20);
             this.btnSave.Text = "Save";
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Size = new System.Drawing.Size(411, 358);
-            this.splitContainer2.SplitterDistance = 135;
-            this.splitContainer2.SplitterWidth = 5;
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.txtOutput);
+            this.splitContainer2.Size = new System.Drawing.Size(308, 286);
+            this.splitContainer2.SplitterDistance = 101;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // txtOutput
+            // 
+            this.txtOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtOutput.Location = new System.Drawing.Point(0, 0);
+            this.txtOutput.Multiline = true;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.Size = new System.Drawing.Size(203, 286);
+            this.txtOutput.TabIndex = 0;
+            // 
+            // lsvServer
+            // 
+            this.lsvServer.Text = "Server";
+            // 
+            // lsvEventLog
+            // 
+            this.lsvEventLog.Text = "Event Log";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 433);
+            this.ClientSize = new System.Drawing.Size(466, 352);
             this.Controls.Add(this.tsc);
             this.Controls.Add(this.sts);
             this.Controls.Add(this.mnu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnu;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Windows Event Log Search";
@@ -232,6 +247,8 @@
             this.tscSearch.PerformLayout();
             this.tscSearch1.ResumeLayout(false);
             this.tscSearch1.PerformLayout();
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -253,7 +270,10 @@
         private System.Windows.Forms.ToolStripButton btnAddSearch;
         private System.Windows.Forms.ToolStripButton btnSave;
         private System.Windows.Forms.ListView lsvSearchList;
-        private System.Windows.Forms.ColumnHeader lsvSearchCol1;
+        private System.Windows.Forms.ColumnHeader lsvSearchText;
+        private System.Windows.Forms.TextBox txtOutput;
+        private System.Windows.Forms.ColumnHeader lsvServer;
+        private System.Windows.Forms.ColumnHeader lsvEventLog;
     }
 }
 

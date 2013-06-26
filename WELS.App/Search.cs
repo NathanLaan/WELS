@@ -1,11 +1,28 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Text;
 
 namespace WELS.App
 {
     internal class Search
     {
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.Text);
+            return sb.ToString();
+        }
+
+        public string[] GetItems()
+        {
+            string[] list = new string[3];
+            list[0] = this.Text;
+            list[1] = this.ServerName;
+            list[2] = this.LogName;
+            return list;
+        }
 
         public string ServerName { get; set; }
         public string LogName { get; set; }

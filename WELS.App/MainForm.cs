@@ -10,6 +10,10 @@ namespace WELS.App
 {
     public partial class MainForm : Form
     {
+
+
+        private Search lastSearch;
+
         public MainForm()
         {
             InitializeComponent();
@@ -18,8 +22,23 @@ namespace WELS.App
         private void btnAddSearch_Click(object sender, EventArgs e)
         {
             SearchForm searchForm = new SearchForm();
-            searchForm.ShowDialog(this);
-            this.lsvSearchList.Items.Add(new ListViewItem(Guid.NewGuid().ToString()));
+            if (this.lastSearch != null)
+            {
+                //
+                // TODO: set if not null
+                //
+                searchForm.SearchParameters = this.lastSearch;
+            }
+            if (searchForm.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+            {
+                this.lastSearch = searchForm.SearchParameters;
+                //
+                // TODO: Add search to search collection.
+                // TODO: Create search results controls. 
+                // TODO: Start search.
+                //
+                this.lsvSearchList.Items.Add(new ListViewItem(this.lastSearch.GetItems()));
+            }
         }
 
         #region Threading

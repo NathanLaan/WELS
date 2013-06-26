@@ -12,8 +12,15 @@ namespace WELS.App
     public partial class SearchForm : Form
     {
 
+        /// <summary>
+        /// Pass-through property for the SearchControl.
+        /// </summary>
         internal Search SearchParameters
         {
+            set
+            {
+                this.searchControl1.SearchParameters = value;
+            }
             get
             {
                 return this.searchControl1.SearchParameters;
@@ -35,6 +42,12 @@ namespace WELS.App
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void SearchForm_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = this.searchControl1;
+            this.searchControl1.Focus();
         }
 
     }
