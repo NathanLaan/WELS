@@ -31,12 +31,14 @@ namespace WELS.App
             this.cboEventLogType.Items.Add(new LogTypeItem(EventLogEntryType.Information));
             this.cboEventLogType.Items.Add(new LogTypeItem(EventLogEntryType.SuccessAudit));
             this.cboEventLogType.Items.Add(new LogTypeItem(EventLogEntryType.Warning));
+            this.cboEventLogType.SelectedIndex = 0;
         }
 
         internal Search SearchParameters
         {
             set
             {
+                this.txtSearchText.Text = value.SearchText;
                 this.txtServerName.Text = value.ServerName;
                 this.txtEventLogName.Text = value.ServerName;
                 //search.LogType = ((LogTypeItem)this.cboEventLogType.SelectedItem).Type;
@@ -46,21 +48,15 @@ namespace WELS.App
             get
             {
                 Search search = new Search();
-                search.Text = this.txtSearchText.Text;
+                search.SearchText = this.txtSearchText.Text;
                 search.ServerName = this.txtServerName.Text;
-                search.LogName = this.txtEventLogName.Text;
+                search.EventLogName = this.txtEventLogName.Text;
                 search.LogType = ((LogTypeItem)this.cboEventLogType.SelectedItem).Type;
                 search.StartTime = this.dtpStart.Value;
                 search.EndTime = this.dtpEnd.Value;
 
                 return search;
             }
-        }
-
-        private void SearchControl_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = this.txtSearchText;
-            this.txtSearchText.Focus();
         }
 
     }

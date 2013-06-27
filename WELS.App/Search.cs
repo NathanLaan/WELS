@@ -11,22 +11,22 @@ namespace WELS.App
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(this.Text);
+            sb.Append(this.SearchText);
             return sb.ToString();
         }
 
         public string[] GetItems()
         {
             string[] list = new string[3];
-            list[0] = this.Text;
+            list[0] = this.SearchText;
             list[1] = this.ServerName;
-            list[2] = this.LogName;
+            list[2] = this.EventLogName;
             return list;
         }
-
+        
+        public string SearchText { get; set; }
         public string ServerName { get; set; }
-        public string LogName { get; set; }
-        public string Text { get; set; }
+        public string EventLogName { get; set; }
         public EventLogEntryType LogType { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
@@ -55,7 +55,7 @@ namespace WELS.App
         {
             try
             {
-                var log = new EventLog(this.LogName, this.ServerName);
+                var log = new EventLog(this.EventLogName, this.ServerName);
                 int count = 0;
                 foreach (EventLogEntry entry in log.Entries)
                 {
@@ -72,14 +72,14 @@ namespace WELS.App
 
                     if (entry.ReplacementStrings.Length > 0)
                     {
-                        if (entry.ReplacementStrings[0].Contains(this.Text))
+                        if (entry.ReplacementStrings[0].Contains(this.SearchText))
                         {
                             sr.ReplacementString = entry.ReplacementStrings[0];
                             sr.Found = true;
                             sr.Timestamp = entry.TimeWritten;
                         }
                     }
-                    if (entry.Message.Contains(this.Text))
+                    if (entry.Message.Contains(this.SearchText))
                     {
                         sr.Message = entry.Message;
                         sr.Found = true;
