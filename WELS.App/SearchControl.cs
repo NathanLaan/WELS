@@ -39,8 +39,8 @@ namespace WELS.App
             set
             {
                 this.txtSearchText.Text = value.SearchText;
-                this.txtServerName.Text = value.ServerName;
-                this.txtEventLogName.Text = value.ServerName;
+                this.txtComputerName.Text = value.ServerName;
+                this.cboEventLogName.Text = value.ServerName;
                 //search.LogType = ((LogTypeItem)this.cboEventLogType.SelectedItem).Type;
                 this.dtpStart.Value = value.StartTime;
                 this.dtpEnd.Value = value.EndTime;
@@ -49,13 +49,26 @@ namespace WELS.App
             {
                 Search search = new Search();
                 search.SearchText = this.txtSearchText.Text;
-                search.ServerName = this.txtServerName.Text;
-                search.EventLogName = this.txtEventLogName.Text;
+                search.ServerName = this.txtComputerName.Text;
+                search.EventLogName = this.cboEventLogName.Text;
                 search.LogType = ((LogTypeItem)this.cboEventLogType.SelectedItem).Type;
                 search.StartTime = this.dtpStart.Value;
                 search.EndTime = this.dtpEnd.Value;
 
                 return search;
+            }
+        }
+
+        private void btnGetEventLogList_Click(object sender, EventArgs e)
+        {
+            string computerName = this.txtComputerName.Text;
+            if (!string.IsNullOrEmpty(computerName))
+            {
+                EventLog[] list = EventLog.GetEventLogs(computerName);
+                foreach (EventLog log in list)
+                {
+                    this.cboEventLogName.Items.Add(log.LogDisplayName);
+                }
             }
         }
 
